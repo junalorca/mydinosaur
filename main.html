@@ -1,0 +1,41 @@
+<html>
+	<head>
+		<title>
+			Web Based
+		</title>
+		<style>
+			.nyakis{
+				position: absolute;
+				top: 100px;
+				left: 500px;
+				
+			}
+			.man{
+				position: absolute;
+				top: 50px;
+				left: 40%;
+				font-size: 50px;
+			}
+		
+			
+		</style>
+		<script>
+			function changePic(){
+				document.getElementById("myimg").src = "dino2.jpg"
+				
+			}
+			function changePic2(){
+				document.getElementById("myimg").src = "dino1.jpg"
+				
+			}
+		</script>
+	</head>
+	<body>
+		<div class="man">
+			M A N Y A K I S
+		</div>
+		<div class="nyakis">
+			<img class="epek" src="dino1.jpg" id="myimg" width="600px" height="600px" onmouseover="changePic()" onmouseleave="changePic2()">
+		</div>
+	</body>
+</html>

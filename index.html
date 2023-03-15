@@ -1,0 +1,87 @@
+<html>
+	<head>
+		<title>
+		 Login 
+		</title>
+			<style>
+				div{
+				width:400px;
+				height:250px;
+				position: absolute;
+				background-color: blue;
+				color: white;
+				font-size:25px;
+				font-family: Stencil Std;
+				border-radius: 25px;
+				padding: 25px;
+				top: 20%;
+				left: 35%;	
+				}
+				
+				input{
+				height: 40px;
+				font-size: 16px;
+				}
+				
+				.button{
+				  background-color: #00229F;
+				  border: none;
+				  color: white;
+				  padding: 0 50px;
+				  text-align: center;
+				  vertical-align: middle;
+				  text-decoration: none;
+				  display: inline-block;
+				  font-family: Stencil Std;
+				  font-size: 16px;
+				  margin: 4px 2px;
+				  cursor: pointer;
+				  border-radius: 25px;
+				  transition: 0.5s;
+				}
+				.button:hover{
+				  background-color: #ADD8E6;
+				}
+				
+				.myHelp{
+				font-size: 16px;
+				color: white;
+				}
+				
+			</style>
+		<script>
+			function myLogin() 
+				{  
+				var myUser = document.getElementById("user").value
+				var myPass = document.getElementById("password").value
+				if (myUser == "admin")
+					{
+						if(myPass == "1234")
+							{
+								window.location="load.html"; 
+							}
+						else
+							{
+							document.getElementById("warning").innerHTML = "Wrong Password"
+							}
+					}
+				else
+					{
+					document.getElementById("warning").innerHTML = "Wrong Username"
+					}
+				}
+				
+		</script>
+	</head>
+	<body>
+		<div>
+			USERNAME:<br>
+			<input type="text" id="user" size="45"><br>
+			PASSWORD:<br>
+			<input type="password" id="password" size="45"><br>
+			<label class="myHelp" id="warning">&nbsp;</label><br>
+			<input class="button"  id="myid" onclick="myLogin()" type="submit" value="LOG IN" size="30">
+			<input class="button"  id="myid2"  type="submit" value="REGISTER" size="30">
+		</div>
+	</body>
+</html>
